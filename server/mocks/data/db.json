@@ -1,6 +1,235 @@
 {
-  "customers": [],
-  "orders": [],
-  "stitches": [],
-  "threads": []
+  "backing-choices": [
+    {
+      "id": "0",
+      "manufacturer": "Henry Glass & Co.",
+      "pattern": "Solid",
+      "colorNumber": "001",
+      "colorName": "Black",
+      "price": 14.94,
+      "wideBolt": true,
+      "imgUrl": ""
+    },
+    {
+      "id": "1",
+      "manufacturer": "Fabric Arts",
+      "pattern": "Colorwash",
+      "colorNumber": "209",
+      "colorName": "Deep Navy",
+      "price": 11.94,
+      "wideBolt": true,
+      "imgUrl": ""
+    },
+    {
+      "id": "2",
+      "manufacturer": "Fabric Arts",
+      "pattern": "Colorwash",
+      "colorNumber": "702",
+      "colorName": "Beige",
+      "price": 11.94,
+      "wideBolt": true,
+      "imgUrl": ""
+    }
+  ],
+  "batting-choices": [
+    {
+      "id": "0",
+      "manufacturer": "Warm Co.",
+      "composition": "100% Cotton",
+      "loft": "Medium",
+      "price": 10,
+      "imgUrl": ""
+    },
+    {
+      "id": "0",
+      "manufacturer": "Warm Co.",
+      "composition": "80/20 Cotton / poly blend",
+      "loft": "High",
+      "price": 11.5,
+      "imgUrl": ""
+    }
+  ],
+  "binding-choices": [
+    {
+      "id": "0",
+      "manufacturer": "Fabric Arts",
+      "pattern": "Colorwash",
+      "colorNumber": "209",
+      "colorName": "Deep Navy",
+      "price": 0.25,
+      "imgUrl": ""
+    },
+    {
+      "id": "2",
+      "manufacturer": "Fabric Arts",
+      "pattern": "Colorwash",
+      "colorNumber": "702",
+      "colorName": "Beige",
+      "price": 0.25,
+      "imgUrl": ""
+    }
+  ],
+  "customers": [
+    {
+      "id": "0",
+      "name": "David Stocker",
+      "billingAddress": {
+        "id": "1",
+        "address1": "1506 N Bon View Drive",
+        "address2": null,
+        "suite": null,
+        "city": "North Chesterfield",
+        "state": "VA",
+        "postal": "23235"
+      },
+      "shippingAddress": {
+        "id": "1",
+        "address1": "1506 N Bon View Drive",
+        "address2": null,
+        "suite": null,
+        "city": "North Chesterfield",
+        "state": "VA",
+        "postal": "23235"
+      },
+      "phone": "8043354241",
+      "email": "coffeemetaltest@gmail.com",
+      "createdDate": "2021-06-30T13:15:30Z"
+    },
+    {
+      "id": "1",
+      "name": "Heather Stocker",
+      "billingAddress": {
+        "id": "0",
+        "address1": "4048 Fox Rest Terrace",
+        "address2": null,
+        "suite": null,
+        "city": "Powhatan",
+        "state": "VA",
+        "postal": "23139"
+      },
+      "shippingAddress": {
+        "id": "1",
+        "address1": "1506 N Bon View Drive",
+        "address2": null,
+        "suite": null,
+        "city": "North Chesterfield",
+        "state": "VA",
+        "postal": "23235"
+      },
+      "phone": "8043356042",
+      "email": "bonairquiltco@gmail.com",
+      "createdDate": "2021-07-06T17:53:46Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "0",
+      "customer": "David Stocker",
+      "shippingAddress": {
+        "id": "1",
+        "address1": "1506 N Bon View Drive",
+        "address2": null,
+        "suite": null,
+        "city": "North Chesterfield",
+        "state": "VA",
+        "postal": "23235"
+      },
+      "jobs": [
+        {
+          "id": "0",
+          "length": 82,
+          "width": 65,
+          "area": 5330,
+          "backingChoice": {
+            "id": "1",
+            "manufacturer": "Fabric Arts",
+            "pattern": "Colorwash",
+            "colorNumber": "209",
+            "colorName": "Deep Navy",
+            "price": 11.94,
+            "wideBolt": true,
+            "imgUrl": ""
+          },
+          "backingYards": 2,
+          "battingChoice": {
+            "id": "0",
+            "manufacturer": "Warm Co.",
+            "composition": "100% Cotton",
+            "loft": "Medium",
+            "price": 10,
+            "imgUrl": ""
+          },
+          "battingYards": 2,
+          "bindingChoice": {
+            "id": "0",
+            "manufacturer": "Fabric Arts",
+            "pattern": "Colorwash",
+            "colorNumber": "209",
+            "colorName": "Deep Navy",
+            "price": 0.25,
+            "imgUrl": ""
+          },
+          "bindingInches": 294,
+          "stitchChoice": {
+            "id": "1",
+            "vendor": "Bon Air Quilt Company",
+            "patternName": "Clover Edge to Edge",
+            "imgUrl": "assets/images/pantos/clover-edge-to-edge.jpg"
+          },
+          "threadChoice": {
+            "id": "1",
+            "manufacturer": "Superior Threads",
+            "colorNumber": "12345-007",
+            "colorName": "Gloss Black",
+            "imgUrl": ""
+          },
+          "comments": "Make sure this uses the 100% cotton batting please",
+          "total": 250.63
+        }
+      ]
+    }
+  ],
+  "stitch-choices": [
+    {
+      "id": "0",
+      "vendor": "Urban Elements",
+      "patternName": "Blustery Breeze",
+      "imgUrl": "assets/images/pantos/blustery-breeze.jpg"
+    },
+    {
+      "id": "1",
+      "vendor": "Bon Air Quilt Company",
+      "patternName": "Clover Edge to Edge",
+      "imgUrl": "assets/images/pantos/clover-edge-to-edge.jpg"
+    },
+    {
+      "id": "2",
+      "vendor": "Urban Elements",
+      "patternName": "Feather Delight",
+      "imgUrl": "assets/images/pantos/feather-delight.jpg"
+    }
+  ],
+  "thread-choices": [
+    {
+      "id": "0",
+      "manufacturer": "Superior Threads",
+      "colorNumber": "12345-002",
+      "colorName": "Royal Blue",
+      "imgUrl": ""
+    },
+    {
+      "id": "1",
+      "manufacturer": "Superior Threads",
+      "colorNumber": "12345-007",
+      "colorName": "Gloss Black",
+      "imgUrl": ""
+    },
+    {
+      "id": "2",
+      "manufacturer": "Superior Threads",
+      "colorNumber": "12345-021",
+      "colorName": "Lipstick Red",
+      "imgUrl": ""
+    }
+  ]
 }

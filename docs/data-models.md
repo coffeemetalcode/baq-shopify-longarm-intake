@@ -13,14 +13,51 @@ interface Address {
 }
 ```
 
+## Backing Choice
+```typescript
+interface BackingChoice {
+  id: string;
+  manufacturer: string;
+  pattern: string;
+  colorNumber: string;
+  colorName: string;
+  price: number; // price per yard
+  wideBolt: boolean;
+  imgUrl: string;
+}
+```
+
+## Batting Choice
+```typescript
+interface BattingChoice {
+  id: string;
+  manufacturer: string;
+  composition: string; // '100% Cotton' | '80/20 Cotton / poly blend'
+  loft: string // 'low' | 'medium' | 'high'|
+  price: number // price per yard
+  imgUrl: string;
+}
+```
+
+## Binding Choice
+```typescript
+interface BindingChoice {
+  id: string;
+  manufacturer: string;
+  pattern: string;
+  colorNumber: string;
+  price: number; // price per linear inch
+  imgUrl: string;
+}
+```
+
 ## Customer
 ```typescript
 interface Customer {
   id: string;
   name: string; // full name
-  addresses: Address[];
   billingAddress: Address;
-  mailingAddress: Address;
+  shippingAddress: Address;
   phone: string;
   email: string;
   createdDate: Date;
@@ -34,12 +71,16 @@ interface Job {
   length: number;
   width: number;
   area: number;
-  batting: number | null;
-  backing: number | null;
-  binding: number | null;
-  stitchPattern: Stitch;
-  threadColor: Thread;
+  battingChoice: BattingChoice | null;
+  battingYards: number | null; // yards
+  backingChoice: BackingChoice | null;
+  backingYards: number | null; // yards
+  bindingChoice: BindingChoice | null;
+  bindingInches: number | null; // linear inches
+  stitchChoice: StitchChoice;
+  threadChoice: ThreadChoice;
   comments: string | null;
+  total: number; // total price for this job
 }
 ```
 
@@ -62,23 +103,23 @@ interface Order {
 }
 ```
 
-## Stitches
+## Stitch Choice
 ```typescript
-interface Stitch {
+interface StitchChoice {
   id: string;
   vendor: string;
-  sku: string;
+  sku?: string;
   patternName: string;
   imgUrl: string;
 }
 ```
 
-## Threads
+## Thread Choice
 ```typescript
-interface Thread {
+interface ThreadChoice {
   id: string;
   manufacturer: string;
-  sku: string;
+  sku?: string;
   colorNumber: string;
   colorName: string;
   imgUrl: string;
